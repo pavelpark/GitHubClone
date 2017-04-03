@@ -24,8 +24,8 @@ enum SaveOptions{
 
 class GitHub {
     
-    let gitHubClientID = "a1f5c7379d6a20fbd36b"
-    let gitHubClientSecret = "401a3e2b16416eb4081e4cf16d32e56f21425c92"
+    let gitHubClientID = kGitHubClientID
+    let gitHubClientSecret = kGitHubClientSecret
     
     static let shared = GitHub()
     
