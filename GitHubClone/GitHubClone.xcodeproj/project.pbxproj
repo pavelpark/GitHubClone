@@ -13,6 +13,7 @@
 		DBB39F121E92B17000B832C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB39F101E92B17000B832C8 /* LaunchScreen.storyboard */; };
 		DBB39F1A1E92C90C00B832C8 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB39F191E92C90C00B832C8 /* GitHub.swift */; };
 		DBB39F1F1E92CE6A00B832C8 /* GitHubAuthControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB39F1E1E92CE6A00B832C8 /* GitHubAuthControllerViewController.swift */; };
+		DBB39F211E92EC1A00B832C8 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB39F201E92EC1A00B832C8 /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DBB39F131E92B17000B832C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBB39F191E92C90C00B832C8 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		DBB39F1E1E92CE6A00B832C8 /* GitHubAuthControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubAuthControllerViewController.swift; path = ../GitHubAuthControllerViewController.swift; sourceTree = "<group>"; };
+		DBB39F201E92EC1A00B832C8 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB39F1E1E92CE6A00B832C8 /* GitHubAuthControllerViewController.swift */,
+				DBB39F201E92EC1A00B832C8 /* FoundationExtensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB39F211E92EC1A00B832C8 /* FoundationExtensions.swift in Sources */,
 				DBB39F1A1E92C90C00B832C8 /* GitHub.swift in Sources */,
 				DBB39F1F1E92CE6A00B832C8 /* GitHubAuthControllerViewController.swift in Sources */,
 				DBB39F081E92B17000B832C8 /* AppDelegate.swift in Sources */,
