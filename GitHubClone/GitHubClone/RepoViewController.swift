@@ -20,7 +20,8 @@ class RepoViewController: UIViewController {
         print("Update Repo Controller Here")
         
         GitHub.shared.getRepos { (repositories) in
-            
+            //Update Table View for Lab
+            print(repositories?.first)
         }
     }
 }
