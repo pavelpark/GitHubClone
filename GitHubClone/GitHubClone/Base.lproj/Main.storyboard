@@ -36,11 +36,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-ch-gcI">
-                                <rect key="frame" x="20" y="308" width="335" height="50"/>
+                                <rect key="frame" x="20" y="559" width="335" height="30"/>
                                 <color key="backgroundColor" red="0.4869510010511805" green="0.87881672961701129" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cmd-od-5po"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="PRINT TOKEN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,17 +46,25 @@
                                     <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiY-lY-EJo"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="G6K-I4-gZp">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="U6S-ek-N5r"/>
+                                    <constraint firstAttribute="width" constant="200" id="UJ7-Vo-c6Y"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.614100547793343" blue="0.50454625603106229" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wy9-ch-gcI" secondAttribute="trailing" constant="20" id="0vP-5O-d1I"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Lf-lI-BAx"/>
                             <constraint firstAttribute="trailing" secondItem="n1T-oV-2kF" secondAttribute="trailing" constant="20" id="9hh-B1-3s7"/>
+                            <constraint firstAttribute="trailing" secondItem="Wy9-ch-gcI" secondAttribute="trailing" constant="20" id="C2e-0D-ulb"/>
                             <constraint firstItem="n1T-oV-2kF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2Q-t5-Pq1"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LIc-tg-Ake"/>
+                            <constraint firstItem="G6K-I4-gZp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBx-e8-Vhu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n1T-oV-2kF" secondAttribute="bottom" constant="8" id="dlx-Kg-AMT"/>
+                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="esj-Vc-880"/>
                             <constraint firstItem="n1T-oV-2kF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="g9t-cb-leJ"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zC7-vv-B4Q"/>
+                            <constraint firstItem="G6K-I4-gZp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nJY-Ki-GTR"/>
+                            <constraint firstItem="n1T-oV-2kF" firstAttribute="top" secondItem="Wy9-ch-gcI" secondAttribute="bottom" constant="20" id="rb9-wy-Evk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -89,4 +94,7 @@
             <point key="canvasLocation" x="1002" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="download" width="96" height="96"/>
+    </resources>
 </document>
