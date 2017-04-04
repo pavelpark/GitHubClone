@@ -15,5 +15,7 @@ class RepoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    func update() {
+        print("Update Repo Controller Here")
+    }
 }

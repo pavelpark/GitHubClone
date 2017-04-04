@@ -50,10 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Token: \(token)")
         } else {
             GitHub.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
-                if success {
-                    print("YAYYYY Token")
-                } else {
-                    print("No Token...")
+               
+                if let authViewController = self.authController, let RepoViewController = self.repoController{
+                    
+                    authViewController.dismissAuthController()
+                    RepoViewController.update()
                 }
             }
         }
