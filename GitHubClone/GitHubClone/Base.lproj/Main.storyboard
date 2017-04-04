@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="G6K-I4-gZp">
-                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="U6S-ek-N5r"/>
                                     <constraint firstAttribute="width" constant="200" id="UJ7-Vo-c6Y"/>
@@ -86,8 +86,45 @@
                     <view key="view" contentMode="scaleToFill" id="e1N-a9-gLC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" placeholder="Search Repositories" backgroundImage="download" translatesAutoresizingMaskIntoConstraints="NO" id="T9f-Ae-sK3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="barTintColor" red="0.4869510011" green="0.87881672960000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-ER-ESo">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" id="LFY-js-mnV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LFY-js-mnV" id="FJn-2G-wzT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T9f-Ae-sK3" firstAttribute="width" secondItem="e1N-a9-gLC" secondAttribute="width" id="2p4-FX-gNy"/>
+                            <constraint firstItem="fhu-wS-D0c" firstAttribute="top" secondItem="lCh-ER-ESo" secondAttribute="bottom" id="6up-YD-6NL"/>
+                            <constraint firstItem="T9f-Ae-sK3" firstAttribute="top" secondItem="IOW-ga-o2p" secondAttribute="bottom" constant="8" id="NyZ-Lh-XQP"/>
+                            <constraint firstItem="lCh-ER-ESo" firstAttribute="top" secondItem="T9f-Ae-sK3" secondAttribute="bottom" id="RRP-ft-7X8"/>
+                            <constraint firstItem="T9f-Ae-sK3" firstAttribute="leading" secondItem="e1N-a9-gLC" secondAttribute="leading" id="aiQ-Vw-iab"/>
+                            <constraint firstItem="lCh-ER-ESo" firstAttribute="leading" secondItem="e1N-a9-gLC" secondAttribute="leading" id="ehq-UK-WAK"/>
+                            <constraint firstAttribute="trailing" secondItem="lCh-ER-ESo" secondAttribute="trailing" id="jhI-qM-UBA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="repoTableView" destination="lCh-ER-ESo" id="piU-6c-drd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lo7-vb-Nz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
