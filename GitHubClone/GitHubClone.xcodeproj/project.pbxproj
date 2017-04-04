@@ -63,7 +63,6 @@
 				DBB39F1D1E92C93800B832C8 /* Controller */,
 				DBB39F1C1E92C93300B832C8 /* View */,
 				DBB39F1B1E92C92A00B832C8 /* Model */,
-				DBB39F0B1E92B17000B832C8 /* Main.storyboard */,
 				DBB39F0E1E92B17000B832C8 /* Assets.xcassets */,
 				DBB39F131E92B17000B832C8 /* Info.plist */,
 			);
@@ -83,6 +82,7 @@
 		DBB39F1C1E92C93300B832C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DBB39F0B1E92B17000B832C8 /* Main.storyboard */,
 				DBB39F101E92B17000B832C8 /* LaunchScreen.storyboard */,
 			);
 			name = View;

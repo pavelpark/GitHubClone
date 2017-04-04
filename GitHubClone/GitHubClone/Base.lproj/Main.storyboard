@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1T-oV-2kF">
-                                <rect key="frame" x="16" y="572" width="343" height="75"/>
+                                <rect key="frame" x="20" y="609" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.33879392734044445" green="1" blue="0.6028402629898828" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="ona-xo-NIT"/>
+                                    <constraint firstAttribute="height" constant="50" id="aYa-kr-k5V"/>
                                 </constraints>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,10 +35,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-ch-gcI">
-                                <rect key="frame" x="16" y="308" width="343" height="50"/>
+                                <rect key="frame" x="20" y="308" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.4869510010511805" green="0.87881672961701129" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Vdb-2b-juW"/>
+                                    <constraint firstAttribute="height" constant="50" id="cmd-od-5po"/>
                                 </constraints>
                                 <state key="normal" title="PRINT TOKEN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,16 +50,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4nF-QN-cZH"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EI0-9u-RK0"/>
-                            <constraint firstAttribute="trailing" secondItem="Wy9-ch-gcI" secondAttribute="trailing" constant="16" id="Lh7-rJ-11Q"/>
-                            <constraint firstItem="n1T-oV-2kF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pzh-vK-lnS"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XSD-rR-Av4"/>
-                            <constraint firstItem="n1T-oV-2kF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gws-d0-gxV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n1T-oV-2kF" secondAttribute="bottom" constant="20" id="qEg-r0-avJ"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="vy3-05-eba"/>
+                            <constraint firstAttribute="trailing" secondItem="Wy9-ch-gcI" secondAttribute="trailing" constant="20" id="0vP-5O-d1I"/>
+                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Lf-lI-BAx"/>
+                            <constraint firstAttribute="trailing" secondItem="n1T-oV-2kF" secondAttribute="trailing" constant="20" id="9hh-B1-3s7"/>
+                            <constraint firstItem="n1T-oV-2kF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2Q-t5-Pq1"/>
+                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LIc-tg-Ake"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n1T-oV-2kF" secondAttribute="bottom" constant="8" id="dlx-Kg-AMT"/>
+                            <constraint firstItem="n1T-oV-2kF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="g9t-cb-leJ"/>
+                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zC7-vv-B4Q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logInButton" destination="n1T-oV-2kF" id="MpG-ZW-Hbi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

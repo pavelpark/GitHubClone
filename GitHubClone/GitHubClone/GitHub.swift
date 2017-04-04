@@ -47,6 +47,7 @@ class GitHub {
         }
         return code
     }
+    
     func tokenRequestFor(url: URL, saveOptions: SaveOptions, completion: @escaping GitHubOAuthCompletion){
         
         func complete(success: Bool){
@@ -71,7 +72,9 @@ class GitHub {
                     
                     if let dataString = String(data: data, encoding: .utf8) {
                         print(dataString)
-                        
+                        if UserDefaults.standard.save(accessToken: dataString) {
+                            print("Saved!")
+                        }
                         complete(success: true)
                     }
                 }).resume()
