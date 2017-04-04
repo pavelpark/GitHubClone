@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBB282171E940C0500CA84A1 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB282161E940C0500CA84A1 /* RepoViewController.swift */; };
+		DBB282191E940D5400CA84A1 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB282181E940D5400CA84A1 /* UIExtensions.swift */; };
 		DBB39F081E92B17000B832C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB39F071E92B17000B832C8 /* AppDelegate.swift */; };
 		DBB39F0D1E92B17000B832C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB39F0B1E92B17000B832C8 /* Main.storyboard */; };
 		DBB39F0F1E92B17000B832C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB39F0E1E92B17000B832C8 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DBB282161E940C0500CA84A1 /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		DBB282181E940D5400CA84A1 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		DBB39F041E92B17000B832C8 /* GitHubClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB39F071E92B17000B832C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB39F0C1E92B17000B832C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB39F0B1E92B17000B832C8 /* Main.storyboard */,
+				DBB282161E940C0500CA84A1 /* RepoViewController.swift */,
 				DBB39F101E92B17000B832C8 /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB39F1E1E92CE6A00B832C8 /* GitHubAuthControllerViewController.swift */,
+				DBB282181E940D5400CA84A1 /* UIExtensions.swift */,
 				DBB39F071E92B17000B832C8 /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -171,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB39F231E92FD6B00B832C8 /* Credential.swift in Sources */,
+				DBB282191E940D5400CA84A1 /* UIExtensions.swift in Sources */,
 				DBB39F211E92EC1A00B832C8 /* FoundationExtensions.swift in Sources */,
+				DBB282171E940C0500CA84A1 /* RepoViewController.swift in Sources */,
 				DBB39F1A1E92C90C00B832C8 /* GitHub.swift in Sources */,
 				DBB39F1F1E92CE6A00B832C8 /* GitHubAuthControllerViewController.swift in Sources */,
 				DBB39F081E92B17000B832C8 /* AppDelegate.swift in Sources */,
@@ -338,6 +346,7 @@
 				DBB39F181E92B17000B832C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
