@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1fk-lF-IL5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Git Hub Auth Controller View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GitHubAuthControllerViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GitHubAuthControllerViewController" id="BYZ-38-t0r" customClass="GitHubAuthControllerViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,6 +27,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aYa-kr-k5V"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,11 +36,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wy9-ch-gcI">
-                                <rect key="frame" x="20" y="308" width="335" height="50"/>
+                                <rect key="frame" x="20" y="559" width="335" height="30"/>
                                 <color key="backgroundColor" red="0.4869510010511805" green="0.87881672961701129" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cmd-od-5po"/>
-                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="PRINT TOKEN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -47,17 +46,25 @@
                                     <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiY-lY-EJo"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="G6K-I4-gZp">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="U6S-ek-N5r"/>
+                                    <constraint firstAttribute="width" constant="200" id="UJ7-Vo-c6Y"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.614100547793343" blue="0.50454625603106229" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wy9-ch-gcI" secondAttribute="trailing" constant="20" id="0vP-5O-d1I"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Lf-lI-BAx"/>
                             <constraint firstAttribute="trailing" secondItem="n1T-oV-2kF" secondAttribute="trailing" constant="20" id="9hh-B1-3s7"/>
+                            <constraint firstAttribute="trailing" secondItem="Wy9-ch-gcI" secondAttribute="trailing" constant="20" id="C2e-0D-ulb"/>
                             <constraint firstItem="n1T-oV-2kF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2Q-t5-Pq1"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LIc-tg-Ake"/>
+                            <constraint firstItem="G6K-I4-gZp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBx-e8-Vhu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n1T-oV-2kF" secondAttribute="bottom" constant="8" id="dlx-Kg-AMT"/>
+                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="esj-Vc-880"/>
                             <constraint firstItem="n1T-oV-2kF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="g9t-cb-leJ"/>
-                            <constraint firstItem="Wy9-ch-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zC7-vv-B4Q"/>
+                            <constraint firstItem="G6K-I4-gZp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nJY-Ki-GTR"/>
+                            <constraint firstItem="n1T-oV-2kF" firstAttribute="top" secondItem="Wy9-ch-gcI" secondAttribute="bottom" constant="20" id="rb9-wy-Evk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,5 +75,80 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
+        <!--Repo View Controller-->
+        <scene sceneID="148-bq-hP1">
+            <objects>
+                <viewController id="1fk-lF-IL5" customClass="RepoViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IOW-ga-o2p"/>
+                        <viewControllerLayoutGuide type="bottom" id="fhu-wS-D0c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e1N-a9-gLC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" placeholder="Search Repositories" backgroundImage="download" translatesAutoresizingMaskIntoConstraints="NO" id="T9f-Ae-sK3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="barTintColor" red="0.4869510011" green="0.87881672960000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-ER-ESo">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" id="LFY-js-mnV" customClass="RepoTableViewCell" customModule="GitHubClone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LFY-js-mnV" id="FJn-2G-wzT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwQ-6g-qKr">
+                                                    <rect key="frame" x="8" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.61410054780000001" blue="0.50454625600000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="OwQ-6g-qKr" firstAttribute="centerY" secondItem="FJn-2G-wzT" secondAttribute="centerY" id="T3U-g7-BtE"/>
+                                                <constraint firstItem="OwQ-6g-qKr" firstAttribute="leading" secondItem="FJn-2G-wzT" secondAttribute="leading" constant="8" id="lqT-2y-ydS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="repoNameLabel" destination="OwQ-6g-qKr" id="8Y5-FI-2q9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4869510011" green="0.87881672960000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T9f-Ae-sK3" firstAttribute="width" secondItem="e1N-a9-gLC" secondAttribute="width" id="2p4-FX-gNy"/>
+                            <constraint firstItem="fhu-wS-D0c" firstAttribute="top" secondItem="lCh-ER-ESo" secondAttribute="bottom" id="6up-YD-6NL"/>
+                            <constraint firstItem="T9f-Ae-sK3" firstAttribute="top" secondItem="IOW-ga-o2p" secondAttribute="bottom" constant="8" id="NyZ-Lh-XQP"/>
+                            <constraint firstItem="lCh-ER-ESo" firstAttribute="top" secondItem="T9f-Ae-sK3" secondAttribute="bottom" id="RRP-ft-7X8"/>
+                            <constraint firstItem="T9f-Ae-sK3" firstAttribute="leading" secondItem="e1N-a9-gLC" secondAttribute="leading" id="aiQ-Vw-iab"/>
+                            <constraint firstItem="lCh-ER-ESo" firstAttribute="leading" secondItem="e1N-a9-gLC" secondAttribute="leading" id="ehq-UK-WAK"/>
+                            <constraint firstAttribute="trailing" secondItem="lCh-ER-ESo" secondAttribute="trailing" id="jhI-qM-UBA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="repoTableView" destination="lCh-ER-ESo" id="piU-6c-drd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lo7-vb-Nz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="124"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="download" width="96" height="96"/>
+    </resources>
 </document>
