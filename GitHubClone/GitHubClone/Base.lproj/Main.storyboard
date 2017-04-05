@@ -141,11 +141,30 @@
                     </view>
                     <connections>
                         <outlet property="repoTableView" destination="lCh-ER-ESo" id="piU-6c-drd"/>
+                        <segue destination="yYq-3y-gT4" kind="presentation" identifier="RepoDetailViewController" id="Zfy-r8-gpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lo7-vb-Nz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002" y="124"/>
+        </scene>
+        <!--Repo Detail View Controller-->
+        <scene sceneID="2rZ-e6-djC">
+            <objects>
+                <viewController id="yYq-3y-gT4" customClass="RepoDetailViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="trU-1N-nH7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mpt-qY-hTi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yfQ-zT-nJK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.4869510011" green="0.87881672960000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwh-KW-Mfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="124"/>
         </scene>
     </scenes>
     <resources>
