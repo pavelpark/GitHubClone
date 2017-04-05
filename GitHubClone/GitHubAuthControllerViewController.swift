@@ -42,7 +42,7 @@ class GitHubAuthControllerViewController: UIViewController {
     }
 
     @IBAction func logInButtonPressed(_ sender: Any) {
-        hasToken()
+//        hasToken()
         let parameters = ["scope" : "email,user,repo"]
         
         GitHub.shared.oAuthRequestWith(parameters: parameters)
