@@ -10,7 +10,21 @@ import UIKit
 
 class RepoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+//    
+//    var allRepos = [Repository](){
+//        didSet{
+//            self.tableView.reloadData()
+//        }
+//    }
+//    var displayRepos : [Repository]? {
+//        didSet {
+//            self.tableView.reloadData()
+//        }
+//    }
+    
     @IBOutlet weak var repoTableView: UITableView!
+    
+    
     
     var repos = [Repository]()
     
@@ -51,3 +65,36 @@ class RepoViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 }
+
+//extension RepoViewController: UITableViewDataSource {
+//    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return.displayRepos?.count ?? allRepos.count
+//    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        
+//        cell.textLabel?.text = displayRepos?[indexPath.row].name ?? allRepos[indexPath.row].name
+//        
+//        return cell
+//    }
+//}
+
+//extension RepoViewController: UISearchBarDelegate {
+//    
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        if let searchedText = searchBar.text {
+//            self.displayRepos = self.allRepos.filter{{$0.name.contains(searchedText)})
+//        }
+//            if searchBar.text == "" {
+//                self.displayRepos = nil
+//            }
+//    }
+//        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//            self.displayRepos = nil
+//            self.searchBar.resignFirstResponder()
+//        }
+//        func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+//            self.searchBar.resignFirsstResponder()
+//        }
+//    }
