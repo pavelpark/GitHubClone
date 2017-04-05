@@ -18,8 +18,14 @@ class Repository {
         print("Complete This for Lab")
         
         print(json)
-        
-        return nil
-        
+        if let name = json["name"] as? String, let description = json["description"] as? String, let language = json["language"] as? String {
+            self.name = name
+            self.description = description
+            self.language = language
+        } else {
+            self.description = "No Description"
+            self.language = "No Language"
+            return nil
+        }
     }
 }
