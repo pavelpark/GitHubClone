@@ -90,7 +90,7 @@
                             <searchBar contentMode="redraw" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" placeholder="Search Repositories" backgroundImage="download" translatesAutoresizingMaskIntoConstraints="NO" id="T9f-Ae-sK3">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <color key="barTintColor" red="0.4869510011" green="0.87881672960000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>
@@ -99,6 +99,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-ER-ESo">
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" id="LFY-js-mnV" customClass="RepoTableViewCell" customModule="GitHubClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -114,6 +115,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.61410054780000001" blue="0.50454625600000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="OwQ-6g-qKr" firstAttribute="centerY" secondItem="FJn-2G-wzT" secondAttribute="centerY" id="T3U-g7-BtE"/>
                                                 <constraint firstItem="OwQ-6g-qKr" firstAttribute="leading" secondItem="FJn-2G-wzT" secondAttribute="leading" constant="8" id="lqT-2y-ydS"/>
@@ -126,7 +128,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4869510011" green="0.87881672960000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="T9f-Ae-sK3" firstAttribute="width" secondItem="e1N-a9-gLC" secondAttribute="width" id="2p4-FX-gNy"/>
                             <constraint firstItem="fhu-wS-D0c" firstAttribute="top" secondItem="lCh-ER-ESo" secondAttribute="bottom" id="6up-YD-6NL"/>
