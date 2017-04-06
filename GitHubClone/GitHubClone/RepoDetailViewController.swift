@@ -41,7 +41,7 @@ class RepoDetailViewController: UIViewController {
         self.repoDescription.text = personalRepo.description
         self.programmingLanguage.text = personalRepo.language
         self.numberOfStars.text = String(describing: personalRepo.numberOfStars)
-        self.isForked.text = personalRepo.isForked ? "is forked" : "not forked"
+        self.isForked.text = personalRepo.isForked ? "Forked" : "Not Forked"
         self.whenCreatedDate.text = personalRepo.whenCreatedDate
 
         
