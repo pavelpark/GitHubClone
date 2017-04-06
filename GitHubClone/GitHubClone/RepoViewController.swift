@@ -24,15 +24,20 @@ class RepoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var repoTableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     var repos = [Repository]()
+    
+    var filterRepo : [Repository]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.repoTableView.dataSource = self
         self.repoTableView.delegate = self
+        let nib = UINib(nibName: RepoTableViewCell.identifier, bundle: Bundle.main)
+        repoTableView.register(nib, forCellReuseIdentifier: RepoTableViewCell.identifier)
         // Do any additional setup after loading the view.
         update()
     }
@@ -67,10 +72,10 @@ class RepoViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "repoCell", for: indexPath) as! RepoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
-        cell.repoNameLabel.text = repos[indexPath.row].name
-        cell.repoNameLabel.textColor = UIColor.black
+        cell.repository = repos[indexPath.row]
+        
         return cell
     }
     
@@ -103,21 +108,21 @@ extension RepoViewController: UIViewControllerTransitioningDelegate{
 //    }
 //}
 
-//extension RepoViewController: UISearchBarDelegate {
-//
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if let searchedText = searchBar.text {
-//            self.displayRepos = self.allRepos.filter{{$0.name.contains(searchedText)})
-//        }
-//            if searchBar.text == "" {
-//                self.displayRepos = nil
-//            }
-//    }
-//        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//            self.displayRepos = nil
-//            self.searchBar.resignFirstResponder()
-//        }
-//        func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-//            self.searchBar.resignFirsstResponder()
-//        }
-//    }
+extension RepoViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let searchedText = searchBar.text {
+            self.filterRepo = self.repos.filter{$0.name.contains(searchedText)}
+        }
+        if searchBar.text == "" {
+            self.filterRepo = nil
+        }
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.filterRepo = nil
+        self.searchBar.resignFirstResponder()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        self.searchBar.resignFirstResponder()
+    }
+}
