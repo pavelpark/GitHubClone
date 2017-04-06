@@ -30,7 +30,6 @@ extension String {
         let pattern = "[^0-9a-zA-Z_-]"
         
         do{
-            
         let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
             
             let range = NSRange(location: 0, length: self.characters.count)

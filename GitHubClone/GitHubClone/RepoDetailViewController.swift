@@ -26,17 +26,6 @@ class RepoDetailViewController: UIViewController {
     
     var personalRepo : Repository!
     
-    //        didSet{
-    //            self.repoName.text = personalRepo.name
-    //            self.repoDescription.text = personalRepo.description
-    //            self.programmingLanguage.text = personalRepo.language
-    //            self.numberOfStars.text = personalRepo
-    //            self.isForked.text = personalRepo
-    //            self.whenCreatedDate.text = personalRepo
-    //        }
-    //
-    //    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.repoName.text = personalRepo.name
@@ -55,7 +44,6 @@ class RepoDetailViewController: UIViewController {
         
         presentWebViewControllerWith(urlString: personalRepo.repoUrlString)
         
-//        presentSafariViewControllerWith(urlString: personalRepo.repoUrlString)
     }
     func presentSafariViewControllerWith(urlString: String){
         

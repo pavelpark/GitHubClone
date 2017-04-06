@@ -24,14 +24,7 @@ class Repository {
         print(json)
         if let name = json["name"] as? String {
             self.name = name
-//            if let description = json["description"] as? String, let language = json["language"] as? String {
-//                self.description = description
-//                self.language = language
-//            } else {
-//                self.description = "No Description"
-//                self.language = "No Language"
-//            }
-            
+//                        
         } else {
             return nil
         }
