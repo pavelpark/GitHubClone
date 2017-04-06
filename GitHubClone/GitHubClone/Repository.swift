@@ -17,18 +17,14 @@ class Repository {
     let isForked: Bool
     let whenCreatedDate: String
     
+    let repoUrlString : String
+    
     init?(json: [String: Any]){
         
         print(json)
         if let name = json["name"] as? String {
             self.name = name
-//            if let description = json["description"] as? String, let language = json["language"] as? String {
-//                self.description = description
-//                self.language = language
-//            } else {
-//                self.description = "No Description"
-//                self.language = "No Language"
-//            }
+//                        
         } else {
             return nil
         }
@@ -57,5 +53,6 @@ class Repository {
         } else {
             return nil
         }
+        self.repoUrlString = json["html_url"] as? String ?? "https://www.github.com"
     }
 }

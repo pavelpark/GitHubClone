@@ -9,19 +9,7 @@
 import UIKit
 
 class RepoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    //
-    //    var allRepos = [Repository](){
-    //        didSet{
-    //            self.tableView.reloadData()
-    //        }
-    //    }
-    //    var displayRepos : [Repository]? {
-    //        didSet {
-    //            self.tableView.reloadData()
-    //        }
-    //    }
-    
+
     @IBOutlet weak var repoTableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -93,6 +81,7 @@ class RepoViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
 extension RepoViewController: UIViewControllerTransitioningDelegate{
+    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         return CustomTransition(duration: 1.0)
@@ -100,23 +89,15 @@ extension RepoViewController: UIViewControllerTransitioningDelegate{
     }
 }
 
-//extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return.displayRepos?.count ?? allRepos.count
-//    }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//
-//        cell.textLabel?.text = displayRepos?[indexPath.row].name ?? allRepos[indexPath.row].name
-//
-//        return cell
-//    }
-//}
-
 extension RepoViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if !searchText.validate(){
+            let lastIndex = searchText.index(before: searchText.endIndex)
+            searchBar.text = searchText.substring(to: lastIndex)
+        }
+        
         if let searchedText = searchBar.text {
             self.filterRepo = self.repos.filter{$0.name.contains(searchedText)}
         }
