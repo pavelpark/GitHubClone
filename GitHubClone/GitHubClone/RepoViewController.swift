@@ -93,11 +93,16 @@ class RepoViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
 extension RepoViewController: UIViewControllerTransitioningDelegate{
+    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         return CustomTransition(duration: 1.0)
         
     }
+//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return CustomTransition(duration: 1.0)
+//    }
+    
 }
 
 //extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
@@ -117,6 +122,12 @@ extension RepoViewController: UIViewControllerTransitioningDelegate{
 extension RepoViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if !searchText.validate(){
+            let lastIndex = searchText.index(before: searchText.endIndex)
+            searchBar.text = searchText.substring(to: lastIndex)
+        }
+        
         if let searchedText = searchBar.text {
             self.filterRepo = self.repos.filter{$0.name.contains(searchedText)}
         }
