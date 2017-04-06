@@ -11,21 +11,49 @@ import Foundation
 class Repository {
     
     let name: String
-    let description: String?
-    let language: String?
+    var description: String?
+    var language: String?
+    let numberOfStars: Int
+    let isForked: Bool
+    let whenCreatedDate: String
     
     init?(json: [String: Any]){
         
         print(json)
         if let name = json["name"] as? String {
             self.name = name
-            if let description = json["description"] as? String, let language = json["language"] as? String {
-                self.description = description
-                self.language = language
-            } else {
-                self.description = "No Description"
-                self.language = "No Language"
-            }
+//            if let description = json["description"] as? String, let language = json["language"] as? String {
+//                self.description = description
+//                self.language = language
+//            } else {
+//                self.description = "No Description"
+//                self.language = "No Language"
+//            }
+        } else {
+            return nil
+        }
+        if let description = json["description"] as? String {
+            self.description = description
+        } else {
+            return nil
+        }
+        if let language = json["language"] as? String {
+            self.language = language
+        } else {
+            return nil
+        }
+        if let numberOfStars = json["stargazers_count"] as? Int {
+            self.numberOfStars = numberOfStars
+        } else {
+            return nil
+        }
+        if let isForked = json["fork"] as? Bool {
+            self.isForked = isForked
+        } else {
+            return nil
+        }
+        if let whenCreatedDate = json["created_at"] as? String {
+            self.whenCreatedDate = whenCreatedDate
         } else {
             return nil
         }

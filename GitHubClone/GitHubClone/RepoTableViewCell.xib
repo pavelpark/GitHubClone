@@ -53,6 +53,7 @@
                     <constraint firstAttribute="bottom" secondItem="Nrb-Rt-gqT" secondAttribute="bottom" constant="8" id="zgV-7O-llb"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="repoDescription" destination="itG-pC-3qL" id="iD4-b4-AsR"/>
                 <outlet property="repoLanguage" destination="Zer-2V-WuD" id="mW9-L0-azl"/>

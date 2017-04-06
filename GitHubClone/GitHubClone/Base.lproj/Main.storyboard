@@ -134,14 +134,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-5A-a42">
-                                <rect key="frame" x="8" y="95" width="132" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIA-i3-GmU">
+                                <rect key="frame" x="8" y="66" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIA-i3-GmU">
-                                <rect key="frame" x="8" y="66" width="89" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-5A-a42">
+                                <rect key="frame" x="8" y="95" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,7 +172,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T23-0f-UeC">
                                 <rect key="frame" x="8" y="28" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.61410054780000001" blue="0.50454625600000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="1fk-lF-IL5" kind="presentation" identifier="RepoViewController" id="ZT9-Oq-qUa"/>
                                 </connections>
@@ -196,6 +198,14 @@
                             <constraint firstItem="rvO-Nu-ud9" firstAttribute="top" secondItem="Iab-9I-P3D" secondAttribute="bottom" constant="8" id="zSD-2A-jCZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="isForked" destination="2o0-mr-Vhh" id="D0E-6k-iCe"/>
+                        <outlet property="numberOfStars" destination="rvO-Nu-ud9" id="gDe-I1-DBO"/>
+                        <outlet property="programmingLanguage" destination="Iab-9I-P3D" id="0uh-3o-bWb"/>
+                        <outlet property="repoDescription" destination="SxK-5A-a42" id="U7f-mE-Tpd"/>
+                        <outlet property="repoName" destination="EIA-i3-GmU" id="yta-IC-5Hc"/>
+                        <outlet property="whenCreatedDate" destination="plj-cz-Ntn" id="NOj-rI-qlT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwh-KW-Mfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

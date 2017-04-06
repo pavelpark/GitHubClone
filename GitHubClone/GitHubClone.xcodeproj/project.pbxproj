@@ -100,7 +100,6 @@
 				DBB39F0B1E92B17000B832C8 /* Main.storyboard */,
 				DBB282221E95B10D00CA84A1 /* RepoTableViewCell.swift */,
 				DBB282231E95B10D00CA84A1 /* RepoTableViewCell.xib */,
-				DBB2821E1E956E7F00CA84A1 /* RepoDetailViewController.swift */,
 				DBB39F101E92B17000B832C8 /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -113,6 +112,7 @@
 				DBB282181E940D5400CA84A1 /* UIExtensions.swift */,
 				DBB39F071E92B17000B832C8 /* AppDelegate.swift */,
 				DBB282161E940C0500CA84A1 /* RepoViewController.swift */,
+				DBB2821E1E956E7F00CA84A1 /* RepoDetailViewController.swift */,
 				DBB282201E95704F00CA84A1 /* CustomTransition.swift */,
 			);
 			name = Controller;
